@@ -1,6 +1,6 @@
 .container {
   position: static;
-  padding-top: 11px;
+  padding-top: 20px;
   padding-bottom: 6px;
   width: 100%;
 
@@ -34,6 +34,7 @@
       justify-content: space-between;
       margin-left: 50px;
       width: 100%;
+      cursor: pointer;
 
       > .list {
         display: flex;
@@ -60,7 +61,6 @@
           gap: 10px;
         }
       }
-
       > .support {
         display: flex;
         gap: 40px;

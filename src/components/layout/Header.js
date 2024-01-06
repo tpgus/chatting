@@ -1,8 +1,16 @@
 import React from 'react';
 import classNames from 'classnames/bind';
-import { PaperPlaneIcon, EnvelopeClosedIcon, BackpackIcon, FileTextIcon } from '@radix-ui/react-icons';
+import { menuItems, supportItems } from '../../constants/index.js';
 
+import { PaperPlaneIcon, EnvelopeClosedIcon, BackpackIcon, FileTextIcon } from '@radix-ui/react-icons';
 import styles from './Header.module.scss';
+
+const Icons = {
+  PaperPlaneIcon,
+  EnvelopeClosedIcon,
+  BackpackIcon,
+  FileTextIcon,
+};
 
 const cx = classNames.bind(styles);
 
@@ -21,27 +29,18 @@ const Header = () => {
 
         <div className={cx('menu')}>
           <div className={cx('list')}>
-            <div className={cx('start')}>
-              <PaperPlaneIcon />
-              시작하기
-            </div>
-            <div className={cx('register')}>
-              <EnvelopeClosedIcon />
-              등록하기
-            </div>
-            <div className={cx('control')}>
-              <BackpackIcon />
-              관리하기
-            </div>
-            <div className={cx('community')}>
-              <FileTextIcon />
-              커뮤니티
-            </div>
+            {menuItems.map((item, index) => (
+              <div className={cx(item.style)} key={index}>
+                {React.createElement(Icons[item.icon])}
+                {item.name}
+              </div>
+            ))}
           </div>
 
           <div className={cx('support')}>
-            <div>FAQ</div>
-            <div>개인 정보 처리 방침</div>
+            {supportItems.map((item, index) => (
+              <div key={index}>{item}</div>
+            ))}
           </div>
         </div>
       </div>
