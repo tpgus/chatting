@@ -1,0 +1,29 @@
+.container {
+  display: block;
+  background-color: #04adef;
+  color: white;
+  border-radius: 8px;
+
+  > .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 1rem;
+
+    > .info {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      > .title {
+        font-size: 1.3rem;
+        font-weight: bold;
+      }
+      > .decription {
+      }
+    }
+    > .icon {
+      font-size: 2.5rem;
+    }
+  }
+}
