@@ -1,0 +1,70 @@
+.container {
+  position: static;
+  padding-top: 20px;
+  padding-bottom: 6px;
+  width: 100%;
+
+  > .containerFluid {
+    display: flex;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+
+    > .brand {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+
+      > .logo {
+        width: 23px;
+        height: 23px;
+        display: block;
+      }
+      > .name {
+        color: gray;
+        font-size: 18px;
+        line-height: 20px;
+      }
+    }
+
+    > .menu {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-left: 50px;
+      width: 100%;
+      cursor: pointer;
+
+      > .list {
+        display: flex;
+        gap: 40px;
+
+        > .start {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+        > .register {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+        > .control {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+        > .community {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+      }
+      > .support {
+        display: flex;
+        gap: 40px;
+      }
+    }
+  }
+}
