@@ -2,15 +2,7 @@ import React from 'react';
 import classNames from 'classnames/bind';
 import { menuItems, supportItems } from '../../constants/index.js';
 
-import { PaperPlaneIcon, EnvelopeClosedIcon, BackpackIcon, FileTextIcon } from '@radix-ui/react-icons';
 import styles from './Header.module.scss';
-
-const Icons = {
-  PaperPlaneIcon,
-  EnvelopeClosedIcon,
-  BackpackIcon,
-  FileTextIcon,
-};
 
 const cx = classNames.bind(styles);
 
@@ -31,7 +23,7 @@ const Header = () => {
           <div className={cx('list')}>
             {menuItems.map((item, index) => (
               <div className={cx(item.style)} key={index}>
-                {React.createElement(Icons[item.icon])}
+                {item.icon}
                 {item.name}
               </div>
             ))}
